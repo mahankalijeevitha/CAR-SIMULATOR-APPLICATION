@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#49aef6"
+    tools:context="com.example.mahan.carsimulator.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="350dp"
+        android:layout_height="325dp"
+        android:layout_marginTop="16dp"
+        android:background="#d5d4d4"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="175dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/track"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@mipmap/car1" />
+
+            <ImageView
+                android:id="@+id/vehicle"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/track"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="116dp"
+                app:srcCompat="@mipmap/car4" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/engine"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        app:srcCompat="@mipmap/car2" />
+
+    <Button
+        android:id="@+id/brake"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="41dp"
+        android:layout_toStartOf="@+id/engine"
+        android:background="#61f6f6"
+        android:text="Brake" />
+
+    <Button
+        android:id="@+id/accelerate"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/brake"
+        android:layout_alignBottom="@+id/brake"
+        android:layout_toEndOf="@+id/engine"
+        android:background="#61f8f8"
+        android:text="Accelerate" />
+
+    <Button
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/brake"
+        android:layout_alignStart="@+id/brake"
+        android:layout_marginBottom="22dp"
+        android:layout_marginStart="9dp"
+        android:background="#f8662c"
+        android:text="Left" />
+
+    <Button
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/left"
+        android:layout_alignBottom="@+id/left"
+        android:layout_alignEnd="@+id/accelerate"
+        android:layout_marginEnd="10dp"
+        android:background="#f8662c"
+        android:text="Right" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Display Metrics"
+        android:layout_alignTop="@+id/relativeLayout"
+        android:layout_alignStart="@+id/engine"
+        android:layout_marginStart="45dp" />
+
+    <TextView
+        android:id="@+id/accelerated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/veloc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/accelerated"
+        android:layout_below="@+id/accelerated"
+        android:layout_marginTop="11dp"
+        android:text=" " />
+
+    <TextView
+        android:id="@+id/tim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/veloc"
+        android:layout_below="@+id/veloc"
+        android:layout_marginTop="11dp" />
+
+    <TextView
+        android:id="@+id/pos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tim"
+        android:layout_below="@+id/tim"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/dist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/pos"
+        android:layout_below="@+id/pos"
+        android:layout_marginTop="8dp" />
+
+</RelativeLayout>
